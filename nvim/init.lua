@@ -1,0 +1,2 @@
+require("ciminof")
+print("Hello")
