@@ -1,2 +1,1 @@
 require("ciminof")
-print("Hello")

@@ -1,0 +1,70 @@
+*thelp.txt*
+*thelp*
+
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄            ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌          ▐░░░░░░░░░░░▌
+ ▀▀▀▀█░█▀▀▀▀ ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░▌          ▐░█▀▀▀▀▀▀▀█░▌
+     ▐░▌     ▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░▌
+     ▐░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌
+     ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌          ▐░░░░░░░░░░░▌
+     ▐░▌     ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░▌          ▐░█▀▀▀▀▀▀▀▀▀ 
+     ▐░▌     ▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌          
+     ▐░▌     ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌          
+     ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌          
+      ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀           
+                                                                 
+
+
+================================================================================
+Contents
+
+        
+        1. Basic binds .......................................|thelp-basic|
+        2. File Navigation ................................|thelp-file-nav|
+        3. Terminals ......................................|thelp-terminal|
+
+
+================================================================================
+1. Basic binds                                              *thelp-basic*
+
+    Movement
+        h,j,k,l     => basic cursor movent in normal and visual
+   
+    Editing
+        n, d        => deletes based on motion and count i.e d3w
+        n, x        => deletes one character
+        n, J        => appends the line below to the end of current line
+        <leader>s   => replaces all occurences of the selected word
+        n, ciw      => replaces current word complex motion
+        v, J,K      => moves the seleced text up or down.     
+
+================================================================================
+2. File Navigation                                          *thelp-file-nav*
+    
+    netrw/telescope
+        <leader>pv  => opens netrw menu
+        <leader>pf  => opens fuzzy finder
+        <C-f>       => opens git fuzzy finder
+        
+    harpoon
+        <C-e>       => open harpoon menu
+        <leader>a   => add current file to harpoon
+
+=================================================================================
+3. Terminals                                                *thelp-terminal*
+    
+        <C-\>       => open terminal
+
+
+=============================================================================
+4. Windows                                                  *thelp-windows*
+        <C-W>       => enters window command mode
+    window mode cmds
+        #w,#W       => jumps to the nth window
+        p           => go to previously accessed window
+        t           => go to top left window
+        b           => go to bottom right window
+        s,v         => opens new horizontal or vertical window respectably
+        r,R         => reorders a window forward and backwards 
+    
+        Note: navigation and enumeration is done top to bottom left to right

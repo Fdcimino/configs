@@ -1,2 +1,2 @@
 require("ciminof.remap")
-print("hello from Frank")
+require("ciminof.set")
