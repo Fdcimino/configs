@@ -21,18 +21,21 @@ refreasher on what the keybind does or a keybind that does what you want.
 Contents
 
         
-        1. Basic binds .......................................|thelp-basic|
+        1. Basic binds ....................................|thelp-basic|
         2. File Navigation ................................|thelp-file-nav|
         3. Terminals ......................................|thelp-terminal|
-
+        4. Windows ........................................|thelp-windows|
+        5. lsp ............................................|thelp-lsp|
 
 ================================================================================
 1. Basic binds                                              *thelp-basic*
 
     Movement
         h,j,k,l     => basic cursor movent in normal and visual
-   
+        0,$         => moves to start or end of line respectably
     Editing
+        i,a         => enters insert mode before or after cursor respectably
+        I,A         => enters insert mode at the start or end of line respectably
         n, d        => deletes based on motion and count i.e d3w
         n, x        => deletes one character
         n, J        => appends the line below to the end of current line
@@ -43,6 +46,7 @@ Contents
         /{text}     => searching for the text
         n, n,N      => moves to next or previous searched tern
         <leader>u   => show undotree window
+        o,O         => starts a new line below or above respectably
     Git
         <leader>gs  => opens git futigive window
 ================================================================================
