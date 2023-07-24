@@ -39,7 +39,10 @@ Contents
         <leader>s   => replaces all occurences of the selected word
         n, ciw      => replaces current word complex motion
         v, J,K      => moves the seleced text up or down.     
-    
+        <leader>f   => formats current file
+        /{text}     => searching for the text
+        n, n,N      => moves to next or previous searched tern
+        <leader>u   => show undotree window
     Git
         <leader>gs  => opens git futigive window
 ================================================================================
@@ -49,7 +52,7 @@ Contents
         <leader>pv  => opens netrw menu
         <leader>pf  => opens fuzzy finder
         <C-p>       => opens git fuzzy finder
-        
+        <leader>ps  => grep string 
     harpoon
         <C-e>       => open harpoon menu
         <leader>a   => add current file to harpoon
@@ -57,7 +60,8 @@ Contents
         <C-t>       => opens second harpoon file
         <C-n>       => opens third harpoon file
         <C-s>       => opens fourth harpoon file
-
+    misc
+        <leader>x   => chmod +x current file
 =================================================================================
 3. Terminals                                                *thelp-terminal*
     
@@ -76,7 +80,6 @@ Contents
         r,R         => reorders a window forward and backwards 
     
         Note: navigation and enumeration is done top to bottom left to right
-
 
 =================================================================================
 5. lsp                                                      *thelp-lsp*

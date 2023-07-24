@@ -1,3 +1,5 @@
+-- helper functions
+
 function GetUndoDir()
     local dir = os.getenv("UserProfile")
     if dir ~= nil then
@@ -9,6 +11,9 @@ function GetUndoDir()
         return dir
     end
 end
+
+--config values
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
