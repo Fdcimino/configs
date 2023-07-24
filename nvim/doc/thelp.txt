@@ -76,3 +76,22 @@ Contents
         r,R         => reorders a window forward and backwards 
     
         Note: navigation and enumeration is done top to bottom left to right
+
+
+=================================================================================
+5. lsp                                                      *thelp-lsp*
+    
+    lsp buffer
+        <C-p>       => previous item in lsp
+        <C-n>       => next item in lsp
+        <C-y>       => confirm item in lsp
+        <C-space>   => complete
+        
+        n, gd       => go to definition
+        n, K        => hover
+        <leader>vws => workspace symbol
+        <leader>vd  => diagnostic open
+
+
+
+
