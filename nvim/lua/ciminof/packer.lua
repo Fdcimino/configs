@@ -50,6 +50,10 @@ return require('packer').startup(function(use)
         }
     }
 
+    use {
+        "ray-x/lsp_signature.nvim",
+    }
+
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end }
