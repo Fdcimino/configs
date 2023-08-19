@@ -1,7 +1,4 @@
 -- helper functions
-
-local linux = false
-
 function GetUndoDir()
     local dir = os.getenv("UserProfile")
     if dir ~= nil then
@@ -10,7 +7,6 @@ function GetUndoDir()
     -- linux undo tree dir
     dir = os.getenv("HOME")
     if dir ~= nil then
-        linux = true
         return dir
     end
 end
@@ -47,20 +43,4 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
-
-local powershell_options = {
-    shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
-    shellcmdflag =
-    "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
-    shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
-    shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
-    shellquote = "",
-    shellxquote = "",
-}
-if linux == true then
-    vim.opt.sh = "nu"
-else
-    for option, value in pairs(powershell_options) do
-        vim.opt[option] = value
-    end
-end
+vim.opt.sh = "nu"
