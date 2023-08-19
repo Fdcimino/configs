@@ -8,3 +8,7 @@ use symbolic links to link the folders to where the apps look for configs
 ```
 mklink /J Link Target
 ```
+- on linux
+```
+
+```
