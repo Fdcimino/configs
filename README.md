@@ -33,5 +33,7 @@ you need to install tpm to be able to get all the plugins
 ```shell
 git clone https://github.com/tmux-plugins/tpm ./plugins/tpm
 ```
+- after running the command install the plugins
+press <C-b> aka control+b then press I aka shift-I (spent 20 minutes debugging at first only to realize it was captial)
 
 ## Nvim setup
