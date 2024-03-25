@@ -16,9 +16,11 @@ def setupLinux [] {
     rm --force ~/.config/nvim
     rm --force ~/.config/nvim-data
     rm --force ~/.config/tmux
+    rm --force ~/.config/nushell
 
     ln -sr ./nvim ~/.config/
     ln -sr ./tmux ~/.config/
+    ln -sr ./nushell ~/.config/
 }
 
 if (sys).host.name == "Windows" {
