@@ -2,14 +2,7 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-    'tsserver',
-    'rust_analyzer',
-    'lua_ls',
-})
 
--- Fix Undefined global 'vim'
-lsp.nvim_workspace()
 
 
 local cmp = require('cmp')
@@ -24,7 +17,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
-lsp.setup_nvim_cmp({
+cmp.setup({
     mapping = cmp_mappings
 })
 
@@ -57,4 +50,12 @@ lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true
+})
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    lsp.default_setup,
+  },
 })
