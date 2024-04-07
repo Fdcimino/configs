@@ -13,9 +13,10 @@
      ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌          
       ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀           
                                                                  
-This is the help file for Frank's nvim config. Its designed to be a quick way
-to look for keybind with out a lot of explanation. Its more of a way to get a
-refreasher on what the keybind does or a keybind that does what you want.
+This is the help file for Frank's nvim,tmux,zsh config or in better words his
+local dev enviroment. Its designed to be a quick way to look for keybind with 
+out a lot of explanation. Its more of a way to get a refreasher on what the 
+keybind does or a keybind that does what you want.
 
 ================================================================================
 Contents
@@ -28,8 +29,14 @@ Contents
         5. lsp ............................................|thelp-lsp|
 
 ================================================================================
+
+
+
 1. Basic binds                                              *thelp-basic*
 
+    prefix nvim - <leader>: space
+    prefix tmux - <tmux>: ctrl + space
+        
     Movement
         h,j,k,l     => basic cursor movent in normal and visual
         0,$         => moves to start or end of line respectably
@@ -57,7 +64,7 @@ Contents
         <leader>pf  => opens fuzzy finder
         <C-p>       => opens git fuzzy finder
         <leader>ps  => grep string 
-    harpoon
+    harpoon -- not in current config 
         <C-e>       => open harpoon menu
         <leader>a   => add current file to harpoon
         <C-h>       => opens first harpoon file
@@ -67,13 +74,33 @@ Contents
     misc
         <leader>x   => chmod +x current file
 =================================================================================
-3. Terminals                                                *thelp-terminal*
+3. Tmux                                                     *thelp-tmux*
     
-        <C-\>       => open terminal
+    Windows
+        <tmux>c     => opens new window
+        <tmux>n     => goes to next window
+        <tmux>p     => goes to previous window
+        <tmux>&     => close current window 
+        <tmux>w     => shows current windows 
+        <tmux>,     => renames current window 
 
+    Pane
+        <tmux>%     => opens new vertical pane 
+        <tmux>"     => opens new horizontal pane 
+        <tmux><c-dir> => resizes current pane 
+    
+       :join-pane -s 2 -t 1 => makes window 2 a pane in window 1
+       :join-pane -s 2.1 -t 1.0 => moves pane 1 from window 2 to pane after 0 in window 1
+       
+    Copy
+        <tmux>[     => changes to copy mode 
+        q           => quits copy mode 
+
+    Command mode
+        <tmux>:     => enters command mode
 
 =============================================================================
-4. Windows                                                  *thelp-windows*
+4. Window mode                                              *thelp-windows*
         <C-W>       => enters window command mode
     window mode cmds
         #w,#W       => jumps to the nth window

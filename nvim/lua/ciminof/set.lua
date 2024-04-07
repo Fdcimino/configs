@@ -55,7 +55,7 @@ local powershell_options = {
     shellxquote = "",
 }
 if linux == true then
-    vim.opt.sh = "nu"
+   --vim.opt.sh = "nu"
 else
     for option, value in pairs(powershell_options) do
         vim.opt[option] = value

@@ -1,10 +1,11 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>")
--- vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>")
--- vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>")
--- vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>")
+-- allows you to navigate tmux panes from neo vim
+vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>")
+vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>")
+vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>")
+vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>")
 
 -- allows you to move a selcted block in Visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -25,5 +26,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
+--replaces all occurences
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+--runs chmod +x on current file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
