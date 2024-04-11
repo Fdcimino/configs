@@ -24,7 +24,7 @@ Contents
         
         1. Basic binds ....................................|thelp-basic|
         2. File Navigation ................................|thelp-file-nav|
-        3. Terminals ......................................|thelp-terminal|
+        3. Tmux  ..........................................|thelp-tmux|
         4. Windows ........................................|thelp-windows|
         5. lsp ............................................|thelp-lsp|
 
@@ -99,7 +99,7 @@ Contents
     Command mode
         <tmux>:     => enters command mode
 
-=============================================================================
+=================================================================================
 4. Window mode                                              *thelp-windows*
         <C-W>       => enters window command mode
     window mode cmds
@@ -125,6 +125,8 @@ Contents
         n, K        => hover
         <leader>vws => workspace symbol
         <leader>vd  => diagnostic open
+        <leader>vrr => find references
+
 
 
 
