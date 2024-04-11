@@ -1,0 +1,49 @@
+"vim.leader": " ",
+"vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false,
+},
+"vim.normalModeKeyBindings": [
+    {
+        "before": ["<leader>","g","d"],
+        "commands": [
+            "editor.action.goToTypeDefinition"
+        ]
+    },
+    {
+        "before": ["<leader>","v","r","n"],
+        "commands": [
+            "editor.action.rename"
+        ]
+    },
+    {
+        "before": ["<leader>","v","r","r"],
+        "commands": [
+            "editor.action.referenceSearch.trigger"
+        ]
+    },
+    {
+        "before": ["K"],
+        "commands": [
+            "editor.action.showHover"
+        ]
+    },
+    {
+        "before": ["<leader>","v","c","a"],
+        "commands": [
+            "editor.action.codeAction"
+        ]
+    }
+],
+"vim.insertModeKeyBindings": [
+    {
+        "before": ["<C-h>"],
+        "when": "editorHasSignatureHelpProvider && editorTextFocus", 
+        "commands": [
+            "editor.action.triggerParameterHints"
+        ]
+    },
+    
+]
+}
