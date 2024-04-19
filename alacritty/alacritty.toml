@@ -1,0 +1,8 @@
+import = ["~/.config/alacritty/flexoki-dark.toml"]
+
+shell="zsh"
+
+
+[font]
+normal = { family = "RobotoMono Nerd Font Mono", style="Regular" }
+italic = { family = "RobotoMono Nerd Font Mono", style="Italic" }

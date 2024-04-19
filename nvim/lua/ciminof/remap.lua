@@ -23,6 +23,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- allows replacing of highlighted work without clearing buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+-- setup copy and paste to/from clipboard
+vim.keymap.set("x", "<leader>y", "\"+y")
+
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 

@@ -99,6 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/home/ciminof/app-repos/theme.sh/bin:$PATH"
-export PATH="/home/ciminof/scripts:$PATH"
-theme.sh flexoki-dark
+export PATH="/home/ciminof/scripts:/home/ciminof/.local/bin:$PATH"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias vim=nvim
