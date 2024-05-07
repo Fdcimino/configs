@@ -7,6 +7,7 @@ rm --force ~/.config/i3
 rm --force ~/.config/i3status-rust
 rm --force ~/.config/alacritty
 
+rm --force ~/.xprofile
 rm --force ~/.zshrc
 
 ln -sr ./nvim ~/.config/
@@ -16,5 +17,6 @@ ln -sr ./i3status-rust ~/.config/
 ln -sr ./alacritty ~/.config/
 
 ln -sr ./.zshrc ~/
+ln -sr ./.xprofile ~/
 
-
+ln -sr ./scripts/* ~/.local/bin

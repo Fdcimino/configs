@@ -11,8 +11,6 @@ Repo that holds all of my config files. I use sym links so the apps can read the
 --------
 
 ## setup 
-Penguin Coder: https://backiee.com/wallpaper/penguin-coder/218767
-enguin Coder: https://backiee.com/wallpaper/penguin-coder/218767
 use symbolic links to link the folders to where the apps look for configs
 
 - on windows powershell  
@@ -29,6 +27,7 @@ ln -sr Link target
 you need to install tpm to be able to get all the plugins
 
 - install tmux
+
 ```shell
 apt install tmux
 ```
@@ -42,7 +41,7 @@ press <C-b> aka control+b then press I aka shift-I (spent 20 minutes debugging a
 
 
 ## Nvim setup
-
+you need to install lazy vim
 
 
 ## references
