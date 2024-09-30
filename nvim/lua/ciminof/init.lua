@@ -17,8 +17,8 @@ require("ciminof.set")
 
 require("lazy").setup({
 {'christoomey/vim-tmux-navigator'},
-{ "folke/neodev.nvim", opts = {} },
-{ 'kepano/flexoki-neovim', name = 'flexoki' },
+{"folke/neodev.nvim", opts = {} },
+{'kepano/flexoki-neovim', name = 'flexoki' },
 {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
 {'williamboman/mason.nvim'},
 {'williamboman/mason-lspconfig.nvim'},
