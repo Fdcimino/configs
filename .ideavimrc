@@ -1,0 +1,249 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+"My Bindings
+let mapleader=" "
+
+" Confirm to save changes before exiting modified buffer
+set formatoptions=jcroqlnt
+" Print line number
+set number
+" Relative line numbers
+set relativenumber
+" Lines of context
+set scrolloff=4
+" Round indent
+set shiftround
+" Columns of context
+set sidescrolloff=8
+" which-key says to set this high, or set notimeout
+set timeoutlen=5000
+set undolevels=10000
+" Disable line wrap
+set nowrap
+
+set backspace=indent,eol,start
+set formatoptions=tcqj
+set listchars=tab:>\ ,trail:-,nbsp:+
+set shortmess=filnxtToOF
+
+
+" Enable plugin behavior
+
+" https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+" s action, such as cs"' (replace " with '), ds" (unquote)
+Plug 'tpope/vim-surround'
+" Enable the whichkey plugin, available on Jetbrains marketplace
+"set which-key
+" Extended matching.  A Neovim default plugin.
+set matchit
+
+
+" Key maps
+
+" https://www.lazyvim.org/configuration/keymaps
+
+" General Keymaps
+
+"" Map \r to the Reformat Code action
+" Go to Left Window
+nmap <C-h> <C-w>h
+" Go to Lower Window
+nmap <C-j> <C-w>j
+" Go to Upper Window
+nmap <C-k> <C-w>k
+" Go to Right Window
+nmap <C-l> <C-w>l
+" Increase Window Height
+nmap <C-Up> <Action>(IncrementWindowHeight)
+" Decrease Window Height
+nmap <C-Down> <Action>(DecrementWindowHeight)
+" Decrease Window Width
+nmap <C-Left> <Action>(DecrementWindowWidth)
+" Increase Window Width
+nmap <C-Right> <Action>(IncrementWindowWidth)
+" Move Line up and down
+vmap J <Action>(MoveLineDown)
+vmap K <Action>(MoveLineUp)
+" Add Comment Below
+nmap gco jgcck
+" Add Comment Above
+nmap gcO kgccj
+" New File
+nmap <leader>fn Action(NewElementSamePlace)
+" Quickfix List
+nmap <leader>xq <Action>(ActivateProblemsViewToolWindow)
+" Previous Quickfix
+nmap [q <Action>(GotoPreviousError)
+" Next Quickfix
+nmap ]q <Action>(GotoNextError)
+" Format
+nmap <leader>ff <Action>(ReformatCode)
+vmap <leader>ff <Action>(ReformatCode)
+" Next Diagnostic
+nmap ]d <Action>(GotoNextError)
+" Prev Diagnostic
+nmap [d <Action>(GotoPreviousError)
+" Next Error
+nmap ]e <Action>(GotoNextError)
+" Prev Error
+nmap [e <Action>(GotoPreviousError)
+" Next Warning
+nmap ]w <Action>(GotoNextError)
+" Prev Warning
+nmap [w <Action>(GotoPreviousError)
+" Toggle Relative Number
+nmap <leader>uL :set relativenumber!<CR>
+" Toggle Diagnostics
+nmap <leader>vd <Action>(ActivateProblemsViewToolWindow)
+" Lazygit (Root Dir)
+nmap <leader>gg <Action>(ActivateCommitToolWindow)
+" Git Blame Line
+nmap <leader>gb <Action>(Annotate)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Lazygit Log
+nmap <leader>gl <Action>(Vcs.Show.Log)
+" Quit All
+nmap <leader>qq <Action>(Exit)
+" Inspect Tree
+nmap <leader>uI <Action>(ActivateStructureToolWindow)
+" Terminal (Root Dir)
+nmap <leader>ft <Action>(ActivateTerminalToolWindow)
+" Split Window Below.  :split<cr> doesn't work.
+nmap <leader>- <c-w>s
+" Split Window Right
+nmap <leader><bar> <c-w>v
+" Delete Window
+nmap <leader>wd <Action>(CloseContent)
+" Toggle Maximize
+nmap <leader>wm <Action>(ToggleDistractionFreeMode)
+" Last Tab
+nmap <leader><tab>o <Action>(GoToLastTab)
+" Close Other Tabs
+nmap <leader><tab>c <Action>(CloseOtherTabs)
+" First Tab
+nmap <leader><tab>f <Action>(GoToTab1)
+" New Tab
+nmap <leader><tab><tab> <Action>(NewElementSamePlace)
+" Next Tab
+nmap <leader><tab>l <Action>(NextTab)
+" Previous Tab
+nmap <leader><tab>h <Action>(PreviousTab)
+" Close Tab
+nmap <leader><tab>d <Action>(CloseContent)
+
+" LSP Keymaps
+
+" Goto Definition
+nmap gd <Action>(GotoDeclaration)
+" References
+nmap vrr <Action>(FindUsages)
+" Goto Implementation
+nmap gI <Action>(GotoImplementation)
+" Goto Type Definition
+nmap gt <Action>(GotoTypeDeclaration)
+" Goto Declaration
+nmap gD <Action>(GotoDeclaration)
+" Signature Help
+nmap gK <Action>(ParameterInfo)
+" Signature Help in Insert Mode
+imap <C-h> <Action>(ParameterInfo)
+" Code Action
+nmap <leader>vcA <Action>(RefactoringMenu)
+vmap <leader>vcA <Action>(RefactoringMenu)
+" Rename File
+nmap <leader>cR <Action>(RenameFile)
+" Rename
+nmap <leader>vrn <Action>(RenameElement)
+" Source Action
+nmap <leader>vca <Action>(ShowIntentionActions)
+" Next Reference
+nmap ]] <Action>(GotoNextError)
+" Prev Reference
+nmap [[ <Action>(GotoPreviousError)
+" Next Reference (alternative)
+nmap <a-n> <Action>(GotoNextError)
+" Prev Reference (alternative)
+nmap <a-p> <Action>(GotoPreviousError)
+
+" Delete buffers to the left
+nmap <leader>bl <Action>(CloseAllToTheLeft)
+" Toggle pin
+nmap <leader>bp <Action>(PinActiveTabToggle)
+" Delete Non-Pinned Buffers
+nmap <leader>bP <Action>(CloseAllUnpinnedEditors)
+" Delete buffers to the right
+nmap <leader>br <Action>(CloseAllToTheRight)
+" Neo-tree Keymaps
+
+" Buffer Explorer
+nmap <leader>pv <Action>(ActivateProjectToolWindow)
+" Notifications (noice, snacks)
+nmap <leader>snd <Action>(ClearAllNotifications)
+nmap <leader>un <Action>(ClearAllNotifications)
+" Telescope Keymaps
+
+" Find Files (Root Dir)
+nmap <leader>pf <Action>(GotoFile)
+" Grep (Root Dir)
+nmap <leader>/ <Action>(FindInPath)
+" Registers
+nmap <leader>s" :registers<cr>
+" Document Diagnostics
+nmap <leader>sd <Action>(ActivateProblemsViewToolWindow)
+" Workspace Diagnostics
+nmap <leader>sD <Action>(ActivateProblemsViewToolWindow)
+" Grep (Root Dir) (alternative)
+nmap <leader>sg <Action>(FindInPath)
+" Search Highlight Groups
+nmap <leader>sH <Action>(HighlightUsagesInFile)
+" Jumplist
+nmap <leader>sj <Action>(RecentLocations)
+" Key Maps
+nmap <leader>sk :map<cr>
+" Location List
+nmap <leader>sl <Action>(ActivateProblemsViewToolWindow)
+" Jump to Mark
+nmap <leader>sm :marks<cr>
+" Man Pages
+nmap <leader>sM <Action>(ShowDocumentation)
+" Options
+nmap <leader>so <Action>(ShowSettings)
+" Quickfix List
+nmap <leader>sq <Action>(ActivateProblemsViewToolWindow)
+" Goto Symbol
+nmap <leader>ss <Action>(GotoSymbol)
+
+nnoremap Y y$
+inoremap <C-U> <C-G>u<C-U>
+inoremap <C-W> <C-G>u<C-W>
+" Q isn't exactly the same.
+nnoremap Q @@
