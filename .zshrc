@@ -108,3 +108,4 @@ export NVM_DIR="$HOME/.config/nvm"
 alias vim=nvim
 alias tmuxs=tmux-sessionizer
 alias tmuxc="tmux-sessionizer ~/configs"
+alias python=python3.13

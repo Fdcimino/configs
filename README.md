@@ -10,6 +10,9 @@ Repo that holds all of my config files. I use sym links so the apps can read the
 - feh
 --------
 
+## tools 
+- fzf
+- ripgrep
 ## setup 
 use symbolic links to link the folders to where the apps look for configs
 
@@ -37,7 +40,7 @@ apt install tmux
 git clone https://github.com/tmux-plugins/tpm ./plugins/tpm
 ```
 - after running the command install the plugins
-press <C-b> aka control+b then press I aka shift-I (spent 20 minutes debugging at first only to realize it was captial)
+press <C-space> aka control+space then press I aka shift-I (spent 20 minutes debugging at first only to realize it was captial)
 
 
 ## Nvim setup
