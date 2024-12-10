@@ -18,7 +18,7 @@ require("ciminof.set")
 require("lazy").setup({
 {'christoomey/vim-tmux-navigator'},
 {"folke/neodev.nvim", opts = {} },
-{'kepano/flexoki-neovim', name = 'flexoki' },
+{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
 {'williamboman/mason.nvim'},
 {'williamboman/mason-lspconfig.nvim'},
@@ -35,4 +35,4 @@ require("lazy").setup({
 })
 
 
-vim.cmd("colorscheme flexoki-dark")
+vim.cmd("colorscheme catppuccin-mocha")
